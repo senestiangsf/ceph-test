@@ -1,0 +1,38 @@
+admin:
+  hosts:
+   rhcs01:
+
+grafana-server:
+  hosts:
+   rhcs02:
+
+mons:
+  hosts:
+   rhcs03:
+   rhcs04:
+   rhcs05:
+
+mgrs:
+  hosts:
+   rhcs03:
+   rhcs04:
+   rhcs05:
+
+osds:
+  hosts:
+   rhcs01:
+   rhcs02:
+   rhcs03:
+   rhcs04:
+   rhcs05:
+
+rgws:
+  hosts:
+   rhcs03:
+   rhcs05:
+
+iscsigws:
+  hosts:
+   rhcs06:
+   rhcs07:
+   
