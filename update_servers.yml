@@ -1,0 +1,14 @@
+---
+- name: Update all Servers
+  hosts: all
+  serial: 1
+  tasks:
+       - name: update all servers to lastest packages
+         dnf:
+            name: "*"
+            state: latest
+         register: ouput
+   
+       - name: Display captured output
+         debug:
+            var: output
