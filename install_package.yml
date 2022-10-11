@@ -8,8 +8,3 @@
              state: latest
 
   
-        - name: start and enable {{ service }}
-          service:
-             name: "{{ service }}"
-             state: started
-             enabled: true  

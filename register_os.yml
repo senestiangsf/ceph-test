@@ -11,5 +11,5 @@
                    username: senestian
                    password: Thierry@1108
                    auto_attach: true
-                   release: '8.3'
+                   release: '8.4'
                    state: present
