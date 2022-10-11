@@ -1,6 +1,24 @@
 ---
 - name: Format disks on OSDS
-  hosts: osds
+  hosts: all
+  gather_facts: false
   tasks:
         - name: Wipe disks
-          shell: for disk in nvme{0..4}n1 sd{a..z} sda{a..i}; do wipefs -a /dev/${disk}; done
+          shell: for disk in  sd{b..e}; do wipefs -a /dev/${disk}; done
+
+        - name: create vggroups for wal and rocksdb
+          shell: vgcreate wal-vg1 /dev/sdb && vgcreate db-vg1 /dev/sdc
+
+        - name: create volume groups on sata disks
+          shell: for disk in sd{d..e}; do vgcreate data-vg-${disk} /dev/${disk}; done
+
+        - name: create the lvms of the  db 
+          shell: for disk in sd{d..e}; do lvcreate -y -n db-lv-${disk} -L 64G db-vg1; done
+
+        - name: create the lvms of the wal devices
+          shell: for disk in sd{d..e}; do lvcreate -y -n wal-lv-${disk} -L 64G wal-vg1; done
+
+        - name: create the data logical volumes for the SATA disks
+          shell: for disk in sd{d..e}; do lvcreate -y -n data-lv-${disk} -l 100%FREE data-vg-${disk}; done
+
+          
