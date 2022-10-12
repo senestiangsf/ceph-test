@@ -1,0 +1,11 @@
+---
+- name: Add local yum repo to all servers
+  hosts: all
+  tasks:
+       - name: create cephadm repository
+         yum_repository:
+                name: cephadm-package
+                description: "Cephadm package local repo"
+                baseurl: "http://143.160.93.204"
+                enabled: true
+                gpgcheck: false
