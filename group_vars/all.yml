@@ -1,2 +1,4 @@
 ---
-package: bash-completion
+package: 
+       - bash-completion
+       - cephadm
