@@ -1,6 +1,7 @@
 ---
 - name: Register and subscribe RHEL systems
   hosts: all
+  gather_facts: false
   tasks:
         - name: Unregister system
           redhat_subscription:
@@ -11,5 +12,5 @@
                    username: senestian
                    password: Thierry@1108
                    auto_attach: true
-                   release: '8.4'
+                   release: '8.3'
                    state: present
