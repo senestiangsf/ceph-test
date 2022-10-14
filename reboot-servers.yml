@@ -1,0 +1,6 @@
+---
+- name: Reboot Servers 
+  hosts: all
+  tasks:
+       - name: Reboot servers
+         reboot:
