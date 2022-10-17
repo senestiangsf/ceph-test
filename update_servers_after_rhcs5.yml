@@ -1,0 +1,8 @@
+---
+- name: Update servers after upgraded to rhcs5  
+  hosts: all
+  tasks: 
+       - name: update packages to latest versions
+         dnf: 
+            name: "*"
+            state: latest
