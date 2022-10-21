@@ -1,4 +1,5 @@
 ---
 package: 
-       - bash-completion
-       - cephadm
+       - bash-completion 
+       - chronyd
+       
