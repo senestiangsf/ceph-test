@@ -1,0 +1,38 @@
+admin:
+  hosts:
+   mk2-cephtest01:
+
+grafana-server:
+  hosts:
+   mk2-cephtest01:
+
+mons:
+  hosts:
+   mk2-cephtest01:
+   mk2-cephtest02:
+   mk2-cephtest03:
+
+mgrs:
+  hosts:
+   mk2-cephtest01:
+   mk2-cephtest02:
+   mk2-cephtest03:
+
+osds:
+  hosts:
+   mk2-cephtest01:
+   mk2-cephtest02:
+   mk2-cephtest03:
+   mk2-cephtest04:
+   
+
+rgws:
+  hosts:
+   mk2-cephtest02:
+   mk2-cephtest04:
+
+iscsigws:
+  hosts:
+   mk2-cephtest03:
+   mk2-cephtest04:
+   
