@@ -9,8 +9,8 @@
 
         - name: register and subscribe systems
           redhat_subscription:
-                   username: senestian
-                   password: Thierry@1108
+                   username: NWU-RHCS
+                   password: NWU@RHCS123!
                    auto_attach: true
-                   release: '8.4'
+                   release: '8.3'
                    state: present
