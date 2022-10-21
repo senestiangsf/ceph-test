@@ -5,7 +5,7 @@
        - name: Copy lvm script file from /files to OSD Nodes
          copy:
               src: files/lvm_process.sh
-              dest: /home/ceph-arcadmin/RHCS_OnM_Scripts/
+              dest: /home/mk2cephtest/RHCS_OnM_Scripts/
               mode: 0645
               owner: root
               group: root
