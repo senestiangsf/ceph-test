@@ -1,6 +1,6 @@
 ---
 - name: Configure NTP Service
-  hosts: iscsigws
+  hosts: all
   tasks:
         - name: Edit /etc/chrony.conf file
           lineinfile:
