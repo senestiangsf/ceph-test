@@ -1,4 +1,10 @@
 ---
 package: 
+<<<<<<< HEAD
        - bash-completion
        - chrony
+=======
+       - bash-completion 
+       - chrony
+       
+>>>>>>> 8cc33fbf9ca562628dc52570ca8b99e6ee686771
