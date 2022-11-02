@@ -1,6 +1,6 @@
 ---
-- name: Motd play for RHCS Archival Cluster
-  hosts: osds 
+- name: Motd play for Test RHCS Cluster
+  hosts: all
   tasks:
         - name: Configure motd banner
           template:
