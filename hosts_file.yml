@@ -5,7 +5,7 @@
   tasks:
         - name: Create /etc/hosts file
           template:
-              src: templates/hosts_file.j2
+              src: templates/host.j2
               dest: /etc/hosts
               owner: root
               group: root

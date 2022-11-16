@@ -1,6 +1,7 @@
 ---
 - name: Complete wipe disks
   hosts: all
+  ignore_errors: true
   tasks:
        - name: Remove all lvms vgs and wipe disks on test servers
-         shell: for disk in sd{a..k}; do lvremove -y /dev/data-vg-$disk/data-lv-$disk; done && for disk in sd{a..l}; do lvremove -y /dev/db-vg1/db-lv-$disk; done && for disk in sd{a..l}; do lvremove -y /dev/wal-vg1/wal-lv-$disk; done && for disk in sd{a..l}; do vgremove -y /dev/data-vg-$disk; done && vgremove wal-vg1 && vgremove db-vg1 && for disk in sd{a..l}; do wipefs -a /dev/$disk; done 
+         shell: for disk in sd{a..l}; do lvremove -y /dev/data-vg-$disk/data-lv-$disk; done && for disk in sd{a..l}; do lvremove -y /dev/db-vg1/db-lv-$disk; done && for disk in sd{a..l}; do lvremove -y /dev/wal-vg1/wal-lv-$disk; done && for disk in sd{a..l}; do vgremove -y /dev/data-vg-$disk; done && vgremove wal-vg1 && vgremove db-vg1 && for disk in sd{a..l}; do wipefs -a /dev/$disk; done 

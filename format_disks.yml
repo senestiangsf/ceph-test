@@ -4,7 +4,7 @@
   gather_facts: false
   tasks:
         - name: Wipe disks
-          shell: for disk in sd{a..c} sd{g..u}; do wipefs -a /dev/${disk}; done
+          shell: for disk in sd{a..c} sd{g..l}; do wipefs -a /dev/${disk}; done
 
         - name: create vggroups rocksdb
           shell: vgcreate wal-vg1 /dev/sdf && vgcreate db-vg1 /dev/sd{d..e}
