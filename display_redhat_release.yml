@@ -1,0 +1,11 @@
+---
+- name: Display OS release
+  hosts: all
+  tasks:
+        - name: capture OS release
+          shell: cat /etc/redhat-release
+          register: output
+
+        - name: display release version
+          debug:
+               var: output.stdout
