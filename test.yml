@@ -2,7 +2,7 @@
 - name: Gather Facts
   hosts: all
   become: true
-  gather_facts: true
+  gather_facts: false
   tasks:
        - name: Display RedHat Version
          debug: 
