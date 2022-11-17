@@ -6,4 +6,4 @@
   tasks:
        - name: Display RedHat Version
          debug: 
-             var: "{{ ansible_distribution }}"
+             var: "{{ ansible_distribution_version }}"
