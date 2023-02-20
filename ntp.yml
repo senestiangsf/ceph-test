@@ -7,6 +7,8 @@
               path: /etc/chrony.conf
               regexp: '^pool'
               line: | 
+                    server 143.160.8.205 iburst  
+                    server 143.160.32.1 iburst  
                     server 143.160.58.6 iburst  
                     server 143.160.58.4 iburst
               owner: root
