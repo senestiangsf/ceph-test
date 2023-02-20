@@ -12,5 +12,5 @@
                    username: NWU-RHCS
                    password: NWU@RHCS123!
                    auto_attach: true
-                   release: '8.6'
+                   release: '8.3'
                    state: present
