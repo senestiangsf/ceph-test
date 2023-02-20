@@ -6,4 +6,9 @@
   tasks:
        - name: Display Uptime
          shell: uptime 
+         register: output
+    
+       - name: Display uptime
+         debug: 
+             var: output.stdout
              
