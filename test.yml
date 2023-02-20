@@ -4,6 +4,6 @@
   become: true
   gather_facts: false
   tasks:
-       - name: Display RedHat Version
-         debug: 
-             var: "{{ ansible_distribution_version }}"
+       - name: Display Uptime
+         shell: uptime 
+             
